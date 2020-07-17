@@ -1,0 +1,11 @@
+# PrefChat
+# By ThijsHFT (Spigot ThijsDEV)
+# Plugin to allow prefix based chat formatting without EssentialsChat.
+
+
+# This value sets the format of your chat. Color codes are allowed (use &)
+# Placeholders: {prefix} = prefix set in permissions plugin, {suffix} = suffix set in permission plugin,
+# {username} = username of player that sends a message, {msg} = message content.
+# I might add PlaceholderAPI support in the future.
+# Default: '{prefix} &r{username} {suffix} &8> &r{msg}'
+format-string: '{prefix} &r{username} {suffix} &8> &r{msg}'
