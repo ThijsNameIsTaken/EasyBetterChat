@@ -1,18 +1,18 @@
-name: PrefChat
-version: 1.1
-main: me.ThijsHFT.PrefChat.Main
+name: EasyBetterChat
+version: 1.0
+main: me.ThijsHFT.EasyBetterChat.Main
 description: Plugin to allow prefix based chat formatting without EssentialsChat.
 author: ThijsHFT
 depend: [Vault]
 commands:
-    pfcreload:
+    ebcreload:
       description: Reloads configuration files
-      aliases: [pfcrefresh, pfcr]
-      permission: prefchat.reload
+      aliases: [ebcrefresh, ebcr]
+      permission: ebc.reload
 permissions:
-    prefchat.*:
+    ebc.*:
         description: ability to use all commands
         children:
-            prefchat.reload: true
-    prefchat.reload:
+            ebc.reload: true
+    ebc.reload:
         description: ability to use the reload command

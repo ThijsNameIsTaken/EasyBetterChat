@@ -1,4 +1,4 @@
-package me.ThijsHFT.PrefChat.Utils;
+package me.ThijsHFT.EasyBetterChat.Utils;
 
 import org.bukkit.ChatColor;
 
@@ -9,3 +9,4 @@ public class Utils {
 	}
 	
 }
+

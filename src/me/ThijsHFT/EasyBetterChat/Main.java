@@ -1,8 +1,8 @@
-package me.ThijsHFT.PrefChat;
+package me.ThijsHFT.EasyBetterChat;
 
-import me.ThijsHFT.PrefChat.Commands.*;
-import me.ThijsHFT.PrefChat.Events.*;
-import me.ThijsHFT.PrefChat.Utils.ConfigManagers.*;
+import me.ThijsHFT.EasyBetterChat.Commands.*;
+import me.ThijsHFT.EasyBetterChat.Events.*;
+import me.ThijsHFT.EasyBetterChat.Utils.ConfigManagers.*;
 
 import java.util.logging.Level;
 import net.milkbowl.vault.chat.*;
@@ -35,7 +35,7 @@ public class Main extends JavaPlugin implements Listener {
     saveDefaultConfig();
     loadConfigs();
     
-    getCommand("pfcreload").setExecutor((CommandExecutor)new Reload());
+    getCommand("ebcreload").setExecutor((CommandExecutor)new Reload());
   }
   
   public void loadConfigs() {

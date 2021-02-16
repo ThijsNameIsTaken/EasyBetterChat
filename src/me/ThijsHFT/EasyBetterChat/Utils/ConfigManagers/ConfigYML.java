@@ -1,6 +1,6 @@
-package me.ThijsHFT.PrefChat.Utils.ConfigManagers;
+package me.ThijsHFT.EasyBetterChat.Utils.ConfigManagers;
 
-import me.ThijsHFT.PrefChat.Main;
+import me.ThijsHFT.EasyBetterChat.Main;
 
 import java.io.File;
 import java.io.IOException;
@@ -62,4 +62,3 @@ public class ConfigYML {
 	}
 
 }
-

@@ -1,4 +1,4 @@
-package me.ThijsHFT.PrefChat.Commands;
+package me.ThijsHFT.EasyBetterChat.Commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -6,8 +6,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.ThijsHFT.PrefChat.Main;
-import me.ThijsHFT.PrefChat.Utils.Utils;
+import me.ThijsHFT.EasyBetterChat.Main;
+import me.ThijsHFT.EasyBetterChat.Utils.Utils;
 
 public class Reload implements CommandExecutor {
 	

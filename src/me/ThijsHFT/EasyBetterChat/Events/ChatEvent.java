@@ -1,8 +1,8 @@
-package me.ThijsHFT.PrefChat.Events;
+package me.ThijsHFT.EasyBetterChat.Events;
 
-import me.ThijsHFT.PrefChat.Main;
-import me.ThijsHFT.PrefChat.Utils.Utils;
-import me.ThijsHFT.PrefChat.Utils.ConfigManagers.*;
+import me.ThijsHFT.EasyBetterChat.Main;
+import me.ThijsHFT.EasyBetterChat.Utils.Utils;
+import me.ThijsHFT.EasyBetterChat.Utils.ConfigManagers.*;
 
 import org.bukkit.World;
 import org.bukkit.entity.Player;
@@ -24,13 +24,20 @@ public class ChatEvent implements Listener {
 	  String suffix = chat.getGroupSuffix(world, group);
 	  
 	  if (suffix == "") {
+		  // Dirty fix because java is dumb
+		  String eventMessage = event.getMessage().replace("%", "%%");
+		  
+		  
 		  String configString = ConfigYML.getConfiguration().getString("format-string")
-				  .replace("{prefix}", prefix).replace("{suffix} ", "").replace("{username}", player.getName()).replace("{msg}", event.getMessage());
+				  .replace("{prefix}", prefix).replace("{suffix} ", "").replace("{username}", player.getName()).replace("{msg}", eventMessage);
 		  
 		  event.setFormat(Utils.translateColor(configString));
 	  } else {
+		// Dirty fix because java is dumb
+		  String eventMessage = event.getMessage().replace("%", "%%");
+		  
 		  String configString = ConfigYML.getConfiguration().getString("format-string")
-				  .replace("{prefix}", prefix).replace("{suffix} ", suffix + " ").replace("{username}", player.getName()).replace("{msg}", event.getMessage());
+				  .replace("{prefix}", prefix).replace("{suffix} ", suffix + " ").replace("{username}", player.getName()).replace("{msg}", eventMessage);
 		  
 		  event.setFormat(Utils.translateColor(configString));
 	  }
@@ -39,3 +46,4 @@ public class ChatEvent implements Listener {
 	}
 
 }
+
